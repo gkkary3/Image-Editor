@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# 이미지 편집기
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+이미지 편집기는 간단하고 직관적인 UI를 통해 이미지를 편집할 수 있는 웹 애플리케이션입니다. 사용자는 이미지를 업로드한 후, 픽셀 크기를 조정하거나 배경을 제거/변경하며 편집한 이미지를 다운로드할 수 있습니다.
 
-## Available Scripts
+## 주요 기능
+- **이미지 업로드**: 첨부 버튼 또는 드래그 앤 드롭 방식으로 이미지를 업로드할 수 있습니다.
+- **픽셀 크기 조정**: 이미지의 너비와 높이를 사용자가 직접 입력하여 조정할 수 있습니다.
+- **배경 제거**: 배경을 제거하는 체크박스를 통해 배경을 간단히 없앨 수 있습니다.
+- **배경색 변경**: RGB 색상을 선택하여 이미지의 배경색을 변경할 수 있습니다.
+- **이미지 다운로드**: 편집된 이미지를 원본 파일명으로 다운로드할 수 있습니다.
 
-In the project directory, you can run:
+## 사용 기술
+- **Frontend**:
+  - React: 컴포넌트 기반 사용자 인터페이스 개발
+  - Redux Toolkit: 전역 상태 관리 (이미지 크기, 배경색, 배경 제거 여부 등)
+  - TailwindCSS: UI 스타일링 및 반응형 디자인 구현
+- **Deployment**:
+  - Vercel: 프론트엔드 배포
+- **기타**:
+  - HTML5 Canvas: 이미지 렌더링 및 편집
+  - JavaScript: 파일 업로드 및 다운로드 로직 처리
 
-### `npm start`
+## 설치 및 실행 방법
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **레포지토리 클론**
+   ```bash
+   git clone https://github.com/yourusername/image-editor.git
+   cd image-editor
