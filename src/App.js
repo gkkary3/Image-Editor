@@ -21,8 +21,9 @@ const App = () => (
           />
         </div>
         <h1 className="text-3xl font-extrabold mb-2 text-gray-800">
-          이미지 편집기
+          <span className="animate-gradient">이미지</span> 편집기
         </h1>
+
         <p className="text-gray-600 text-sm max-w-md mx-auto">
           이 도구를 사용하여 이미지를 간편하게 업로드하고, 픽셀 크기를
           조정하거나 배경을 제거 및 변경할 수 있습니다. 완료된 이미지는 다운로드

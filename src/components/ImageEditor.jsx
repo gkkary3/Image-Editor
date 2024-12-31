@@ -54,7 +54,7 @@ const ImageEditor = () => {
           ref={canvasRef}
           width={width}
           height={height}
-          className="border"
+          className="border-dashed border-2 border-zinc-600"
         />
         {imageName && <p className="text-sm mt-2 text-gray-600">{imageName}</p>}
       </div>
@@ -77,8 +77,9 @@ const ImageEditor = () => {
             className="border p-1 ml-2"
           />
         </div>
-        <div>
-          <label>
+        <div className="flex justify-between items-center my-4">
+          {/* 배경 제거 */}
+          <label className="flex items-center">
             <input
               type="checkbox"
               checked={removeBackground}
@@ -87,15 +88,17 @@ const ImageEditor = () => {
             />
             배경 제거
           </label>
-        </div>
-        <div>
-          <label>배경색:</label>
-          <input
-            type="color"
-            value={backgroundColor}
-            onChange={(e) => dispatch(setBackgroundColor(e.target.value))}
-            className="ml-2"
-          />
+
+          {/* 배경색 */}
+          <div className="flex items-center">
+            <label className="mr-2">배경색:</label>
+            <input
+              type="color"
+              value={backgroundColor}
+              onChange={(e) => dispatch(setBackgroundColor(e.target.value))}
+              className="w-10 h-10 border p-1 rounded"
+            />
+          </div>
         </div>
       </div>
     </>
