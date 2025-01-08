@@ -54,30 +54,37 @@ const ImageEditor = () => {
           ref={canvasRef}
           width={width}
           height={height}
-          className="border-dashed border-2 border-zinc-600"
+          className="border-2 border-dashed border-zinc-600"
         />
-        {imageName && <p className="text-sm mt-2 text-gray-600">{imageName}</p>}
+        {imageName && <p className="mt-2 text-sm text-gray-600">{imageName}</p>}
       </div>
       <div className="mt-4">
         <div>
           <label>너비:</label>
           <input
             type="number"
-            value={width}
-            onChange={(e) => dispatch(setWidth(Number(e.target.value)))}
-            className="border p-1 ml-2"
+            value={width === 0 ? "" : width}
+            onChange={(e) => {
+              const value = e.target.value === "" ? 0 : Number(e.target.value);
+              dispatch(setWidth(value));
+            }}
+            className="p-1 ml-2 border"
           />
         </div>
         <div>
           <label>높이:</label>
           <input
             type="number"
-            value={height}
-            onChange={(e) => dispatch(setHeight(Number(e.target.value)))}
-            className="border p-1 ml-2"
+            value={height === 0 ? "" : height}
+            onChange={(e) => {
+              const value = e.target.value === "" ? 0 : Number(e.target.value);
+              dispatch(setHeight(value));
+            }}
+            className="p-1 ml-2 border"
           />
         </div>
-        <div className="flex justify-between items-center my-4">
+
+        <div className="flex items-center justify-between my-4">
           {/* 배경 제거 */}
           <label className="flex items-center">
             <input
@@ -96,7 +103,7 @@ const ImageEditor = () => {
               type="color"
               value={backgroundColor}
               onChange={(e) => dispatch(setBackgroundColor(e.target.value))}
-              className="w-10 h-10 border p-1 rounded"
+              className="w-10 h-10 p-1 border rounded"
             />
           </div>
         </div>

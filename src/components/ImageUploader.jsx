@@ -32,11 +32,11 @@ const ImageUploader = () => {
 
   return (
     <div className="flex flex-col items-center p-4">
-      <h2 className="text-lg font-bold mb-4">첨부파일</h2>
-      <div className="flex items-center w-full max-w-md border border-gray-400 rounded-lg p-2 bg-gray-50">
+      <h2 className="mb-4 text-lg font-bold">첨부파일</h2>
+      <div className="flex items-center w-full max-w-md p-2 border border-gray-400 rounded-lg bg-gray-50">
         {/* 드래그 앤 드롭 영역 */}
         <div
-          className="flex-grow h-20 border-dashed border-2 border-blue-500 flex items-center justify-center text-gray-500"
+          className="flex items-center justify-center flex-grow h-20 text-gray-500 border-2 border-blue-500 border-dashed"
           onDragOver={(e) => e.preventDefault()}
           onDrop={handleDrop}
         >
@@ -47,13 +47,16 @@ const ImageUploader = () => {
             onChange={handleFileChange}
             className="hidden"
           />
-          <label htmlFor="fileInput" className="cursor-pointer text-gray-500">
-            이미지를 드래그 앤 드롭하거나 클릭하세요.
+          <label htmlFor="fileInput" className="text-gray-500 cursor-pointer">
+            <p className="p-2 text-sm">
+              {/* {" "} */}
+              이미지를 드래그 앤 드롭하거나 클릭하세요.{" "}
+            </p>
           </label>
         </div>
         {/* 첨부 버튼 */}
         <button
-          className="ml-2 px-4 py-2 bg-blue-500 text-white border border-blue-700 rounded-lg hover:bg-blue-600 hover:border-blue-800"
+          className="px-4 py-2 ml-2 text-white bg-blue-500 border border-blue-700 rounded-lg hover:bg-blue-600 hover:border-blue-800"
           onClick={() => document.getElementById("fileInput").click()}
         >
           첨부
