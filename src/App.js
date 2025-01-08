@@ -24,7 +24,7 @@ const App = () => (
           <span className="animate-gradient">이미지</span> 편집기
         </h1>
 
-        <p className="max-w-md mx-auto text-sm text-gray-600">
+        <p className="max-w-md p-1 mx-auto text-sm text-gray-600">
           이미지를 업로드하고 크기 조정, 배경 제거 및 변경이 가능하고, <br></br>
           수정한 이미지는 다운로드할 수 있습니다.
         </p>
