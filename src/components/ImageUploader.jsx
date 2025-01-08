@@ -48,7 +48,7 @@ const ImageUploader = () => {
             className="hidden"
           />
           <label htmlFor="fileInput" className="text-gray-500 cursor-pointer">
-            <p className="p-2 text-sm">
+            <p className="p-1 text-xs sm:text-sm sm:p-2">
               {/* {" "} */}
               이미지를 드래그 앤 드롭하거나 클릭하세요.{" "}
             </p>
@@ -56,7 +56,7 @@ const ImageUploader = () => {
         </div>
         {/* 첨부 버튼 */}
         <button
-          className="px-4 py-2 ml-2 text-white bg-blue-500 border border-blue-700 rounded-lg hover:bg-blue-600 hover:border-blue-800"
+          className="px-2 py-2 ml-2 text-xs text-white bg-blue-500 border border-blue-700 rounded-lg sm:px-4 sm:text-sm hover:bg-blue-600 hover:border-blue-800"
           onClick={() => document.getElementById("fileInput").click()}
         >
           첨부
